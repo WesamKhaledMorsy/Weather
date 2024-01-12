@@ -1,0 +1,297 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --active-nav-color:#0A9ACD;
+    --main-background:#1E202B;
+    --card-background:#323544;
+    --card-header-background:#2D303D;
+}
+
+
+/* Nav bar */
+ .nav-item  .nav-link{
+    color: White;
+    margin-inline: 0.4rem;
+    vertical-align: baseline;
+    position: relative;
+    text-align: center;
+}
+.navbar-toggler {
+    border: 2px #c1c1c1 solid;
+}
+.navbar-toggler:focus {
+    text-decoration: none;
+    outline: 0;
+    box-shadow: 0 0 0 #c1c1c1;
+}
+.navbar-nav .nav-link{
+    transition: all 400ms ease-in;
+}
+.navbar-nav .nav-link:hover{
+    color: var(--active-nav-color);
+    border: 1px var(--active-nav-color) solid ;
+    border-radius: 35px;
+}
+.navbar-nav .nav-link.active{    
+    color: var(--active-nav-color);
+    border: 1px var(--active-nav-color) solid ;
+    border-radius: 35px;    
+}
+.navbar-brand{
+    color: White;
+    margin-inline: 0.4rem;
+    vertical-align: baseline;
+    font-weight: 800;
+    font-size: 1.5rem;
+    padding-top: 0.5rem;
+    transition: all 400ms ease-in-out;
+}
+.navbar-brand:hover{
+    animation: coloring 500ms infinite ease-in-out;  
+}
+@keyframes coloring {
+    from{
+        background: -webkit-linear-gradient(#eee, #c87f7f);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    to{
+        background: -webkit-linear-gradient(#2a1a1a, #1524f1);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+/************************************/
+
+/***** begin section of weather ****/
+main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+main section{
+    background-color: var(--main-background);
+    width: 100%;
+    height: 700px;
+    max-height: 1200px;
+}
+
+@media screen and (max-width:1024px) {
+    main section{        
+        height: 1200px;
+    }
+}
+
+.back-photo{
+    height: 600px;
+    width: 100% !important;        
+}
+.back-photo img{
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    width: 100%;
+    height: 70%;
+    z-index: 0;
+}
+.back-photo .container-fluid .row .inputSearch{
+    position: relative;
+    display: flex;
+    width: 100%;    
+    
+}
+.back-photo .container-fluid .row .inputSearch input{
+    position: relative;
+    top: -360px;
+    width: 80%;
+    margin: auto;
+    padding: 1rem 1.1rem;
+    border-radius: 30px;
+    background: transparent;
+    color: #dfdfdf !important;
+    border: 1px var(--active-nav-color) solid;
+}
+.back-photo .container-fluid .row .inputSearch input[placeholder]{
+    font-style: italic;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.1rem;
+    color: var(--main-background);
+}
+
+.back-photo .container-fluid .row .inputSearch .find-btn{
+    position: absolute;
+    top: -356px;
+    right: 12%;
+    margin: auto;
+    padding: 0.8rem 1.6rem;
+    border-radius: 30px;        
+}
+@media screen and (min-width:1200px) and (max-width:1366px) {
+    .back-photo .container-fluid .row .inputSearch .find-btn{
+        position: absolute;
+        top: -356px;
+        right: 11%;
+        margin: auto;
+        padding: 0.8rem 1.6rem;
+        border-radius: 30px;        
+    
+    }
+}
+@media screen and (max-width:605px) {
+    .back-photo .container-fluid .row .inputSearch .find-btn{
+        position: absolute;
+        top: -356px;
+        right: 12.8%;
+        margin: auto;
+        padding: 0.8rem 1.6rem;
+        border-radius: 30px;        
+    
+    }
+}
+/**************************************/
+/*********** display-cards of weather ********************/
+.display-cards{
+    position: relative;
+    top: -375px; 
+}
+.cards-container{
+    width: 90%;
+    margin: auto ;
+}
+.cards-container .card{
+    height: 300px;
+    background-color: var(--card-background);
+    color: #dfdfdf;
+    border: 2px #8f8f8f solid;    
+}
+
+.cards-container .card .card-header{
+    color: #dfdfdf;
+    background-color:var(--card-header-background) ;
+    font-size: 0.9rem;
+    padding-bottom: 0;
+}
+.cards-container .card .card-body{
+    text-align: left;
+}
+.card-body a{
+    text-decoration: none;
+}
+.card-text{
+    font-size: 4.5rem;
+}
+.card-text.tempUp {
+    font-size: 15px;
+}
+.card-text.tempDown{
+    font-size: 14px;
+    color: #989898;
+}
+ul{
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;    
+}
+@media screen and (min-width:765px) and (max-width:1024px) {
+    .cards-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-inline-start: -150px;            
+    }
+    .cards-container .col-md-4 .card {
+        width:500px !important;
+        position: relative;       
+        left: -50%;
+    }
+    
+}
+/***************** End of weather data section*******************/
+/***************** Start of contact section*******************/
+#contact{
+    background-color: var(--card-header-background);
+    height: fit-content !important;    
+}
+.input-data{
+    position: relative;    
+   
+}
+.Sub-btn{
+    background-color: #1524f1;
+    padding: 0.6rem 1rem;
+    border-radius: 35px;
+    border: 2px #1524f1 solid;
+    position: absolute;
+    right: 0.5%;
+    top: 5%;
+}
+.input-data input{
+    padding: 0.9rem 1rem;
+    border-radius: 35px;
+    background-color: #1E202B;
+    border-color: transparent;
+}
+.social-icons{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;    
+}
+.social-icons .icons{
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    background-color: rgba(0, 0,0, 0.6);
+    margin-left: 0.5rem;
+    transition: all 400ms;
+}
+.social-icons .icons a i{
+    font-size: 1.3rem;
+    position: relative;
+    left: 50%;
+    bottom: -25%;
+    transform: translateX(-50%);
+    transition: all 400ms;
+}
+.social-icons .icons:hover a  i {
+    color: #eee;
+}
+.social-icons .icons:hover {
+    background-color: #0A9ACD;
+}
+/***************** End of contact section*******************/
+
+/***************** Contact Page ****************/
+
+.info-card{
+    height: 300px;
+    margin-top: 3rem;
+    background-color: #2D303D;
+}
+.info-card .space{
+    height: 100px;
+}
+.info-card .card-body p{
+    font-size: 0.8rem !important;
+    color: #bfc1c8 !important;
+}
+.info-card .card-body p i{
+    margin-inline-end:0.3rem ;
+}
+
+.contact-form input,.contact-form  textarea{
+    border-radius: 30px;
+    border: 2px #323544 solid;
+    background-color: transparent;
+}
+.contact-form input:focus,.contact-form  textarea:focus{
+    border: 2px #0A9ACD solid;
+    background-color: transparent;
+}

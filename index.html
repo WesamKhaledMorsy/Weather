@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300&family=Righteous&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./images/weatherLogo.png" type="image/x-icon">
+    <title>Weather</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark">
+        <div class="container text-light">
+            <a class="navbar-brand" href="#"> <img src="./images/navLogo.png" alt="logo"> Weather</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse py-5" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link" aria-current="page">Home</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#">News</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#">Live cameras</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#">Photos</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <section id="weather-data" class="d-block  align-items-center">
+            <div class="back-photo">
+                <img src="./images/city-background.jpg" alt="back-ground-weather">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12 inputSearch">
+                            <input type="text" placeholder="Find your location..." id="find-city" class="form-control">
+                            <button  id="findBtn" class="find-btn btn btn-primary">Find</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid display-cards">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row cards-container m-auto gx-2 gy-2" id="weatherDisplay">
+                            <!-- <div class="col-md-4 col-sm-12">
+                                <div class="card text-center">
+                                    <div class="card-header">
+                                        <ul>
+                                            <li>Thrusday</li>
+                                            <li> 11 January</li>
+                                        </ul>                                      
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Cairo</h5>
+                                        <p class="card-text"> 17 C  <span> <img src="https://cdn.weatherapi.com/weather/64x64/night/116.png" alt="weather"></span></p>
+                                        <a href="#" class="text-primary ">Partly cloudy</a>
+                                    </div>
+                                    <div class="card-footer text-muted">
+                                        <ul>
+                                            <li><i class="fa-solid fa-umbrella"></i> 20%</li>
+                                            <li><i class="fa-solid fa-wind"></i> 20%</li>
+                                            <li><i class="fa-solid fa-compass"></i> 20%</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-12">
+                                <div class="card">
+                                    <div class="card-header text-center">
+                                            <p>Friday</p>                                                               
+                                    </div>
+                                    <div class="card-body text-center">
+                                        <p> <img src="https://cdn.weatherapi.com/weather/64x64/day/113.png" alt="weather"></p>
+                                        <p class="card-text tempUp"> 17 C  </p>
+                                        <p class="card-text tempDown"> 7 C  </p>
+                                        <a href="#" class="text-primary ">clear</a>
+                                    </div>
+                                    
+                                </div>
+                            </div>  
+                            <div class="col-md-4 col-sm-12">
+                                <div class="card">
+                                    <div class="card-header text-center">
+                                            <p>Saturday</p>                                                               
+                                    </div>
+                                    <div class="card-body text-center">
+                                        <p> <img src="https://cdn.weatherapi.com/weather/64x64/day/113.png" alt="weather"></p>
+                                        <p class="card-text tempUp"> 20 C  </p>
+                                        <p class="card-text tempDown"> 9 C  </p>
+                                        <a href="#" class="text-primary ">clear</a>
+                                    </div>
+                                    
+                                </div>
+                            </div>                              -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="input-data">
+                            <input type="text" placeholder="Enter your email to subscribe..." class="form-control">
+                            <button type="submit" class="Sub-btn btn btn-primary">Subscribe </button>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="social-icons gy-2 my-2">
+                            <div class="icons" ><a href="#"> <i class="fa-brands fa-facebook-f"></i></a></div>
+                            <div class="icons" ><a href="#"> <i class="fa-brands fa-twitter"></i></a></div>                            
+                            <div class="icons" > <a href="#"> <i class="fa-brands fa-google-plus-g"></i></a></div>
+                            <div class="icons" ><a href="#"> <i class="fa-brands fa-pinterest"></i></a></div>                                             
+                        </div>
+                    </div>
+                    <div class="col-md-12 text-muted my-4 px-5">
+                        <p>Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/navbar.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "5-th-assignment",
+  "version": "1.0.0",
+  "description": "Weather site to display the weather data for 3 days",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "Weather"
+  },
+  "keywords": [
+    "#Weather",
+    "#api",
+    "#js"
+  ],
+  "author": "WesamKhaledMorsy",
+  "license": "ISC"
+}

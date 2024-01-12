@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300&family=Righteous&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="./images/weatherLogo.png" type="image/x-icon" />
+    <title>Weather</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark">
+        <div class="container text-light">
+            <a class="navbar-brand" href="#">
+                <img src="./images/navLogo.png" alt="logo" /> Weather</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse py-5" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Live cameras</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Photos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active"  aria-current="page">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="card info-card">
+                            <div class="space"></div>
+                            <div class="card-body mt-5">
+                                <p class="card-text text-light">
+                                    <i class="fa-solid fa-location-pin text-primary fs-5"></i>
+                                    Company Name INC. <br />
+                                    2803 Avenue Street, Los Angeles
+                                </p>
+                                <p class="card-text text-light">
+                                    <i class="fa-solid fa-phone text-primary fs-5"></i> +1 800
+                                    314 235
+                                </p>
+                                <p class="card-text text-light">
+                                    <i class="fa-solid fa-envelope text-primary fs-5"></i>
+                                    contact@companyname.com
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 pt-5 px-5">
+                        <div class="row text-light contact-form gx-3 gy-2">
+                            <div class="col-md-12">
+                                <h1>Contact us</h1>
+                            </div>
+                            <div class="col-md-12">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Commodi consectetur inventore ducimus, facilis, numquam id
+                                    soluta omnis eius recusandae nesciunt vero repellat harum
+                                    cum. Nisi facilis odit hic, ipsum sed!
+                                </p>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" placeholder="Your Name...">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="email"class="form-control" placeholder="Email Address...">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" placeholder="Company Name...">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" placeholder="Website...">
+                            </div>
+                            <div class="col-md-12">
+                                <textarea name="message" class="form-control" id="message"  rows="5" placeholder="Message..."></textarea>
+                            </div>
+                            <div class="col-md-12 d-flex flex-row-reverse">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="input-data">
+                            <input type="text" placeholder="Enter your email to subscribe..." class="form-control" />
+                            <button type="submit" class="Sub-btn btn btn-primary">
+                                Subscribe
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="social-icons gy-2 my-2">
+                            <div class="icons">
+                                <a href="#"> <i class="fa-brands fa-facebook-f"></i></a>
+                            </div>
+                            <div class="icons">
+                                <a href="#"> <i class="fa-brands fa-twitter"></i></a>
+                            </div>
+                            <div class="icons">
+                                <a href="#"> <i class="fa-brands fa-google-plus-g"></i></a>
+                            </div>
+                            <div class="icons">
+                                <a href="#"> <i class="fa-brands fa-pinterest"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 text-muted my-4 px-5">
+                        <p>
+                            Copyright 2014 Company name. Designed by Themezy. All rights
+                            reserved
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/navbar.js"></script>
+</body>
+
+</html>
