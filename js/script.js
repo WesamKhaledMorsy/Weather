@@ -29,7 +29,7 @@ let city = 'Cairo';
 let weatherList = [];
 let alldata= [];
 async function getWeather(){
-    let data = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=d64838192a314b73bcc144253241001&q=${city}&days=3`);
+    let data = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=d64838192a314b73bcc144253241001&q=${city}&days=3`);
     let result =await data.json();
     weatherList=[...result.forecast.forecastday];
     alldata = result;    
@@ -39,7 +39,7 @@ getWeather().then(function(){
 });
 
 async function SearchCityWeather(_city){    
-    let data = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=d64838192a314b73bcc144253241001&q=${_city}&days=3`);
+    let data = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=d64838192a314b73bcc144253241001&q=${_city}&days=3`);
     let result =await data.json();
     displayWeatherData(result.forecast.forecastday,_city)
  }
